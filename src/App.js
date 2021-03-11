@@ -1,4 +1,5 @@
 import {
+	Button,
 	Card,
 	CardContent,
 	Divider,
@@ -23,9 +24,9 @@ function App() {
 
 	return (
 		<div className='App'>
-			<Card style={{ width: '60vw' }} elevation={3}>
+			<Card elevation={3}>
 				<CardContent>
-					<Grid container spacing={4}>
+					<Grid container justify='space-between' spacing={4}>
 						<Grid item xs={12}>
 							<Typography variant='h5'> Criação de Comida </Typography>
 						</Grid>
@@ -59,9 +60,15 @@ function App() {
 								/>
 							</Grid>
 						</Grid>
+
+						<Grid item xs={12}>
+							<Divider />
+						</Grid>
+
 						<Grid item container xs={12} sm={6} spacing={2}>
 							<Grid item xs={12}>
 								<TextField
+									fullWidth
 									autocomplete='off'
 									variant='outlined'
 									label={`Carboídratos (g/${formik.values.portion})`}
@@ -74,6 +81,7 @@ function App() {
 
 							<Grid item xs={12}>
 								<TextField
+									fullWidth
 									autocomplete='off'
 									variant='outlined'
 									label={`Proteínas (g/${formik.values.portion})`}
@@ -86,6 +94,7 @@ function App() {
 
 							<Grid item xs={12}>
 								<TextField
+									fullWidth
 									autocomplete='off'
 									variant='outlined'
 									label={`Gorduras (g/${formik.values.portion})`}
@@ -107,7 +116,11 @@ function App() {
 							/>
 						</Grid>
 
-						<p>{JSON.stringify(formik.values, null, 2)}</p>
+						<Grid item alignContent='right'>
+							<Button raised align='right' variant='contained' color='primary'>
+								Salvar
+							</Button>
+						</Grid>
 					</Grid>
 				</CardContent>
 			</Card>
