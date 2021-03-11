@@ -7,6 +7,14 @@ import {
 } from '@material-ui/core';
 import React from 'react';
 
+const cal = (carb, prot, fat) => {
+	if (isNaN(carb)) carb = 0;
+	if (isNaN(prot)) prot = 0;
+	if (isNaN(fat)) fat = 0;
+
+	return 4 * carb + 4 * prot + 9 * fat;
+};
+
 const MiniFoodCard = ({ foodName, portion, carb, prot, fat }) => {
 	return (
 		<Card elevation={5}>
@@ -20,6 +28,11 @@ const MiniFoodCard = ({ foodName, portion, carb, prot, fat }) => {
 					</Grid>
 					<Grid item xs={12}>
 						<Divider />
+					</Grid>
+					<Grid item xs={12}>
+						<Typography variant='p'>
+							Calorias: {cal(carb, prot, fat)}kcal
+						</Typography>
 					</Grid>
 					<Grid item xs={12}>
 						<Typography variant='p'>Carbo: {carb}g</Typography>
