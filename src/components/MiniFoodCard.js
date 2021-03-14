@@ -15,9 +15,16 @@ const cal = (carb, prot, fat) => {
 	return 4 * carb + 4 * prot + 9 * fat;
 };
 
+const styles = {
+	Card: {
+		width: '100%',
+		maxWidth: 250,
+	},
+};
+
 const MiniFoodCard = ({ foodName, portion, carb, prot, fat }) => {
 	return (
-		<Card elevation={5}>
+		<Card elevation={5} style={styles.Card}>
 			<CardContent>
 				<Grid container spacing={1}>
 					<Grid item xs={12}>

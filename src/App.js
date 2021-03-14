@@ -3,12 +3,7 @@ import { useState } from 'react';
 import CreateFoodForm from './components/CreateFoodForm';
 
 function App() {
-	const [foodList, setFoodList] = useState([]);
 	const [open, setOpen] = useState(false);
-
-	const addFoodToList = (food) => {
-		setFoodList([...foodList, food]);
-	};
 
 	const openDialog = () => {
 		setOpen(true);
@@ -21,7 +16,6 @@ function App() {
 	return (
 		<div className='App'>
 			<CreateFoodForm
-				addFoodToList={addFoodToList}
 				open={open}
 				handleClose={handleClose}
 			/>
@@ -29,8 +23,6 @@ function App() {
 				{' '}
 				Adicionar Comida{' '}
 			</Button>
-
-			<p>{JSON.stringify(foodList, null, 2)}</p>
 		</div>
 	);
 }

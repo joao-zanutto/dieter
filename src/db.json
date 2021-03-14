@@ -1,0 +1,76 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "foodName": "Frango",
+      "portion": "100g",
+      "carb": 1,
+      "prot": 20,
+      "fat": 2
+    },
+    {
+      "carb": 123,
+      "prto": 123,
+      "fat": 123,
+      "foodName": "Beterraba",
+      "portion": "100g",
+      "id": 2
+    },
+    {
+      "carb": 123,
+      "prto": 123,
+      "fat": 123,
+      "foodName": "Beterraba",
+      "portion": "100g",
+      "id": 3
+    },
+    {
+      "carb": 123,
+      "prto": 123,
+      "fat": 123,
+      "foodName": "Beterraba",
+      "portion": "100g",
+      "id": 4
+    },
+    {
+      "carb": 123,
+      "prto": 123,
+      "fat": 123,
+      "foodName": "Beterraba",
+      "portion": "100g",
+      "id": 5
+    },
+    {
+      "carb": 123,
+      "prto": 123,
+      "fat": 123,
+      "foodName": "Beterraba",
+      "portion": "100g",
+      "id": 6
+    },
+    {
+      "carb": 123,
+      "prto": 123,
+      "fat": 123,
+      "foodName": "Beterraba",
+      "portion": "100g",
+      "id": 7
+    },
+    {
+      "carb": 123,
+      "prto": 123,
+      "fat": 123,
+      "foodName": "Beterraba",
+      "portion": "100g",
+      "id": 8
+    },
+    {
+      "carb": 123,
+      "prto": 123,
+      "fat": 123,
+      "foodName": "Beterraba",
+      "portion": "100g",
+      "id": 9
+    }
+  ]
+}

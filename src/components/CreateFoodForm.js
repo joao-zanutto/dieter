@@ -10,9 +10,10 @@ import {
 	Typography,
 } from '@material-ui/core';
 import { useFormik } from 'formik';
+import { postFood } from '../api';
 import MiniFoodCard from './MiniFoodCard';
 
-function CreateFoodForm({ addFoodToList, open, handleClose }) {
+function CreateFoodForm({ open, handleClose }) {
 	const formik = useFormik({
 		initialValues: {
 			foodName: '',
@@ -38,7 +39,12 @@ function CreateFoodForm({ addFoodToList, open, handleClose }) {
 				portion: values.portion,
 			};
 
-			addFoodToList(food);
+			const status = postFood(food);
+			console.log(status);
+			if (status.message === 'success') {
+				resetFields();
+				alert('Comida criada com successo!');
+			}
 		},
 	});
 
