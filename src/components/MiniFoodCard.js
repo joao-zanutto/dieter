@@ -22,33 +22,33 @@ const styles = {
 	},
 };
 
-const MiniFoodCard = ({ foodName, portion, carb, prot, fat }) => {
+const MiniFoodCard = ({ food }) => {
 	return (
 		<Card elevation={5} style={styles.Card}>
 			<CardContent>
 				<Grid container spacing={1}>
 					<Grid item xs={12}>
 						<Typography variant='h6'>
-							{foodName === '' ? 'Comida' : foodName}
+							{food.foodName === '' ? 'Comida' : food.foodName}
 						</Typography>
-						<Typography variant='h7'>{portion}</Typography>
+						<Typography variant='h7'>{food.portion}</Typography>
 					</Grid>
 					<Grid item xs={12}>
 						<Divider />
 					</Grid>
 					<Grid item xs={12}>
 						<Typography variant='p'>
-							Calorias: {cal(carb, prot, fat)}kcal
+							Calorias: {cal(food.carb, food.prot, food.fat)}kcal
 						</Typography>
 					</Grid>
 					<Grid item xs={12}>
-						<Typography variant='p'>Carbo: {carb}g</Typography>
+						<Typography variant='p'>Carbo: {food.carb}g</Typography>
 					</Grid>
 					<Grid item xs={12}>
-						<Typography variant='p'>Protein: {prot}g</Typography>
+						<Typography variant='p'>Protein: {food.prot}g</Typography>
 					</Grid>
 					<Grid item xs={12}>
-						<Typography variant='p'>Gordura: {fat}g</Typography>
+						<Typography variant='p'>Gordura: {food.fat}g</Typography>
 					</Grid>
 				</Grid>
 			</CardContent>

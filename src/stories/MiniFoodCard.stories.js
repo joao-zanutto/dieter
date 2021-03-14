@@ -9,12 +9,14 @@ export default {
 
 const Template = (args) => <MiniFoodCard {...args} />;
 
-export const FirstStory = Template.bind({});
+export const SimpleFood = Template.bind({});
 
-FirstStory.args = {
-	foodName: 'Frango',
-	portion: '100g',
-	carb: 1,
-	prot: 20,
-	fat: 4,
+SimpleFood.args = {
+	food: {
+		foodName: 'Frango',
+		portion: '100g',
+		carb: 1,
+		prot: 20,
+		fat: 4,
+	},
 };
