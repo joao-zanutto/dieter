@@ -3,8 +3,10 @@ import {
 	CardContent,
 	Divider,
 	Grid,
+	IconButton,
 	Typography,
 } from '@material-ui/core';
+import { Add, Delete, Remove } from '@material-ui/icons';
 import React from 'react';
 
 const cal = (carb, prot, fat) => {
@@ -22,7 +24,7 @@ const styles = {
 	},
 };
 
-const MiniFoodCard = ({ food }) => {
+const MiniFoodCard = ({ food, count }) => {
 	return (
 		<Card elevation={5} style={styles.Card}>
 			<CardContent>
@@ -31,7 +33,22 @@ const MiniFoodCard = ({ food }) => {
 						<Typography variant='h6'>
 							{food.foodName === '' ? 'Comida' : food.foodName}
 						</Typography>
+
 						<Typography variant='h7'>{food.portion}</Typography>
+						{count !== 'preview' ? (
+							<div style={{ display: 'flex' }}>
+								<IconButton
+									disabled={count === 0}
+									color='secondary'
+									size='small'>
+									<Remove fontSize='small' />
+								</IconButton>
+								<Typography variant='h6'>{count}</Typography>
+								<IconButton color='primary' size='small'>
+									<Add fontSize='small' />
+								</IconButton>
+							</div>
+						) : null}
 					</Grid>
 					<Grid item xs={12}>
 						<Divider />

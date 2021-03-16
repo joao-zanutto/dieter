@@ -133,7 +133,7 @@ function CreateFoodForm({ postFood }) {
 					</Grid>
 
 					<Grid item xs={11} sm={6}>
-						<MiniFoodCard food={{ ...formik.values }} />
+						<MiniFoodCard food={{ ...formik.values }} count='preview' />
 					</Grid>
 
 					<Grid item container alignContent='right' spacing={2}>

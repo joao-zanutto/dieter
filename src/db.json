@@ -1,244 +1,27 @@
 {
-  "foods": [
-    {
-      "id": 1,
-      "foodName": "Frango",
-      "portion": "100g",
-      "carb": 1,
-      "prot": 20,
-      "fat": 2
-    },
-    {
-      "carb": 123,
-      "prto": 123,
-      "fat": 123,
-      "foodName": "Beterraba",
-      "portion": "100g",
-      "id": 2
-    },
-    {
-      "carb": 123,
-      "prto": 123,
-      "fat": 123,
-      "foodName": "Beterraba",
-      "portion": "100g",
-      "id": 3
-    },
-    {
-      "carb": 123,
-      "prto": 123,
-      "fat": 123,
-      "foodName": "Beterraba",
-      "portion": "100g",
-      "id": 4
-    },
-    {
-      "carb": 123,
-      "prto": 123,
-      "fat": 123,
-      "foodName": "Beterraba",
-      "portion": "100g",
-      "id": 5
-    },
-    {
-      "carb": 123,
-      "prto": 123,
-      "fat": 123,
-      "foodName": "Beterraba",
-      "portion": "100g",
-      "id": 6
-    },
-    {
-      "carb": 123,
-      "prto": 123,
-      "fat": 123,
-      "foodName": "Beterraba",
-      "portion": "100g",
-      "id": 7
-    },
-    {
-      "carb": 123,
-      "prto": 123,
-      "fat": 123,
-      "foodName": "Beterraba",
-      "portion": "100g",
-      "id": 8
-    },
-    {
-      "carb": 123,
-      "prto": 123,
-      "fat": 123,
-      "foodName": "Beterraba",
-      "portion": "100g",
-      "id": 9
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 10
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 11
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 12
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 13
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 14
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 15
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 16
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 17
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 18
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 19
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 20
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 21
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 22
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 23
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 24
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 25
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 26
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 27
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 28
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 29
-    },
-    {
-      "carb": 0,
-      "prto": 0,
-      "fat": 0,
-      "foodName": "",
-      "portion": "100g",
-      "id": 30
-    }
-  ]
+	"foods": [
+		{
+			"id": 1,
+			"foodName": "Frango",
+			"portion": "100g",
+			"carb": 1,
+			"prot": 20,
+			"fat": 2
+		},
+		{
+			"carb": 123,
+			"prto": 123,
+			"fat": 123,
+			"foodName": "Beterraba",
+			"portion": "100g",
+			"id": 2
+		}
+	],
+	"journal": [
+		{
+			"foodId": 1,
+			"count": 2,
+			"when": "2021-03-16T01:12:56.782Z"
+		}
+	]
 }

@@ -10,7 +10,7 @@ const styles = {
 	},
 };
 
-const FoodGalery = ({ foodList }) => {
+const FoodGallery = ({ foodList }) => {
 	return (
 		<Grid container style={styles.container} spacing={2}>
 			{foodList.map((food) => {
@@ -24,4 +24,4 @@ const FoodGalery = ({ foodList }) => {
 	);
 };
 
-export default FoodGalery;
+export default FoodGallery;

@@ -1,13 +1,13 @@
 import React from 'react';
 
-import FoodGalery from '../components/FoodGalery';
+import FoodGallery from '../components/FoodGallery';
 
 export default {
-	title: 'FoodGalery',
-	component: FoodGalery,
+	title: 'FoodGallery',
+	component: FoodGallery,
 };
 
-const Template = (args) => <FoodGalery {...args} />;
+const Template = (args) => <FoodGallery {...args} />;
 
 export const TwoElementsScenario = Template.bind({});
 

@@ -9,14 +9,29 @@ export default {
 
 const Template = (args) => <MiniFoodCard {...args} />;
 
-export const SimpleFood = Template.bind({});
+export const PreviewFoodCard = Template.bind({});
+export const GalleryCountZero = Template.bind({});
+export const GalleryNormalSample = Template.bind({});
 
-SimpleFood.args = {
-	food: {
-		foodName: 'Frango',
-		portion: '100g',
-		carb: 1,
-		prot: 20,
-		fat: 4,
-	},
+const sampleFood = {
+	foodName: 'Frango',
+	portion: '100g',
+	carb: 1,
+	prot: 20,
+	fat: 4,
+};
+
+PreviewFoodCard.args = {
+	food: sampleFood,
+	count: 'preview',
+};
+
+GalleryCountZero.args = {
+	food: sampleFood,
+	count: 0,
+};
+
+GalleryNormalSample.args = {
+	food: sampleFood,
+	count: 2,
 };
