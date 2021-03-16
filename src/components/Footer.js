@@ -1,10 +1,10 @@
-import { AppBar, Grid, Toolbar } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import React from 'react';
 import ProgressBar from './ProgressBar';
 
 const styles = {
 	background: {
-		height: '60px',
+		height: '35px',
 		backgroundColor: '#FFFFFF',
 		position: 'fixed',
 		padding: '20px',
@@ -20,7 +20,7 @@ const styles = {
 const Header = ({ stats }) => {
 	return (
 		<div style={styles.background}>
-			<Grid container spacing={4} style={styles.container}>
+			<Grid container spacing={3} style={styles.container}>
 				<Grid item xs={3}>
 					<ProgressBar
 						progress={stats.calIntake}

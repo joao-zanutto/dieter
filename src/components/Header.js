@@ -1,5 +1,5 @@
 import { AppBar, IconButton, Toolbar, Typography } from '@material-ui/core';
-import { AccountCircle } from '@material-ui/icons';
+import { Add } from '@material-ui/icons';
 import MenuIcon from '@material-ui/icons/Menu';
 import React from 'react';
 
@@ -15,20 +15,23 @@ const styles = {
 	},
 };
 
-const Header = () => {
+const Header = ({ openDialog }) => {
 	return (
 		<div style={styles.root}>
-			<AppBar position='static'>
+			<AppBar position='fixed'>
 				<Toolbar>
 					<IconButton edge='start' style={styles.menuButton} color='inherit'>
 						<MenuIcon />
 					</IconButton>
 					<Typography variant='h6' style={styles.title}>
-						Photos
+						Diário
 					</Typography>
 					<div>
-						<IconButton color='inherit'>
-							<AccountCircle />
+						<IconButton
+							onClick={openDialog}
+							variant='contained'
+							color='inherit'>
+							<Add />
 						</IconButton>
 					</div>
 				</Toolbar>

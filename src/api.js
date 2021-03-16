@@ -11,3 +11,12 @@ export const postFood = (food) => {
 		})
 		.catch((err) => console.log(err));
 };
+
+export const getFoodList = (setFoodList) => {
+	api
+		.get('/foods/')
+		.then((response) => {
+			setFoodList(response.data);
+		})
+		.catch((err) => console.log(err));
+};

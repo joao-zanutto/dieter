@@ -1,9 +1,10 @@
-import { Button, Dialog, DialogContent } from '@material-ui/core';
+import { Dialog, DialogContent, Grid } from '@material-ui/core';
 import { useState } from 'react';
 import CreateFoodForm from './components/CreateFoodForm';
-import { postFood } from './api';
+import { postFood, getFoodList } from './api';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import FoodGalery from './components/FoodGalery';
 
 const stats = {
 	calIntake: 1300,
@@ -18,6 +19,11 @@ const stats = {
 
 function App() {
 	const [open, setOpen] = useState(false);
+	const [foodList, setFoodList] = useState([]);
+
+	useState(() => {
+		getFoodList(setFoodList);
+	}, []);
 
 	const openDialog = () => {
 		setOpen(true);
@@ -29,16 +35,14 @@ function App() {
 
 	return (
 		<div className='App'>
-			<Header />
+			<Header openDialog={openDialog} />
+			<FoodGalery foodList={foodList} />
+			<Footer stats={stats} />
 			<Dialog open={open} onClose={handleClose}>
 				<DialogContent>
 					<CreateFoodForm postFood={postFood} />
 				</DialogContent>
 			</Dialog>
-			<Button onClick={openDialog} variant='contained' color='primary'>
-				Adicionar Comida
-			</Button>
-			<Footer stats={stats} />
 		</div>
 	);
 }
