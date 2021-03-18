@@ -30,10 +30,11 @@ function CreateFoodForm({ postFood }) {
 
 			const food = {
 				carb: carb,
-				prto: prot,
+				prot: prot,
 				fat: fat,
 				foodName: values.foodName,
 				portion: values.portion,
+				cal: 4 * carb + 4 * prot + 9 * fat,	
 			};
 
 			const status = postFood(food);

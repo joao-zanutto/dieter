@@ -1,13 +1,12 @@
 import { create } from 'apisauce';
 
-const api = create({ baseURL: 'http://localhost:3001' });
+const api = create({ baseURL: 'http://localhost:3010' });
 
 export const postFood = (food) => {
 	api
 		.post('/foods/', food)
 		.then((response) => {
-			if (response.status >= 200 && response.status < 300)
-				return { message: 'success' };
+			alert(JSON.stringify(response.data, null, 2));
 		})
 		.catch((err) => console.log(err));
 };
@@ -17,6 +16,15 @@ export const getFoodList = (setFoodList) => {
 		.get('/foods/')
 		.then((response) => {
 			setFoodList(response.data);
+		})
+		.catch((err) => console.log(err));
+};
+
+export const addQuantity = (id) => {
+	api
+		.get(`/consume/${id}`)
+		.then((response) => {
+			alert(response.data.message);
 		})
 		.catch((err) => console.log(err));
 };

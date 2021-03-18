@@ -6,7 +6,7 @@ import {
 	IconButton,
 	Typography,
 } from '@material-ui/core';
-import { Add, Delete, Remove } from '@material-ui/icons';
+import { Add, Remove } from '@material-ui/icons';
 import React from 'react';
 
 const cal = (carb, prot, fat) => {
@@ -24,7 +24,7 @@ const styles = {
 	},
 };
 
-const MiniFoodCard = ({ food, count }) => {
+const MiniFoodCard = ({ food, addQuantity }) => {
 	return (
 		<Card elevation={5} style={styles.Card}>
 			<CardContent>
@@ -35,16 +35,19 @@ const MiniFoodCard = ({ food, count }) => {
 						</Typography>
 
 						<Typography variant='h7'>{food.portion}</Typography>
-						{count !== 'preview' ? (
+						{food.dailyConsumed !== 'preview' ? (
 							<div style={{ display: 'flex' }}>
 								<IconButton
-									disabled={count === 0}
+									disabled={food.dailyConsumed === 0}
 									color='secondary'
 									size='small'>
 									<Remove fontSize='small' />
 								</IconButton>
-								<Typography variant='h6'>{count}</Typography>
-								<IconButton color='primary' size='small'>
+								<Typography variant='h6'>{food.dailyConsumed}</Typography>
+								<IconButton
+									color='primary'
+									size='small'
+									onClick={() => addQuantity(food._id)}>
 									<Add fontSize='small' />
 								</IconButton>
 							</div>

@@ -1,7 +1,7 @@
 import { Dialog, DialogContent } from '@material-ui/core';
 import { useState } from 'react';
 import CreateFoodForm from './components/CreateFoodForm';
-import { postFood, getFoodList } from './api';
+import { postFood, getFoodList, addQuantity } from './api';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FoodGallery from './components/FoodGallery';
@@ -36,7 +36,7 @@ function App() {
 	return (
 		<div className='App'>
 			<Header openDialog={openDialog} />
-			<FoodGallery foodList={foodList} />
+			<FoodGallery foodList={foodList} addQuantity={addQuantity} />
 			<Footer stats={stats} />
 			<Dialog open={open} onClose={handleClose}>
 				<DialogContent>
