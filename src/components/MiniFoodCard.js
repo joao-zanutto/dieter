@@ -24,7 +24,7 @@ const styles = {
 	},
 };
 
-const MiniFoodCard = ({ food, addQuantity }) => {
+const MiniFoodCard = ({ food, addQuantity, diminishQuantity }) => {
 	return (
 		<Card elevation={5} style={styles.Card}>
 			<CardContent>
@@ -40,7 +40,8 @@ const MiniFoodCard = ({ food, addQuantity }) => {
 								<IconButton
 									disabled={food.dailyConsumed === 0}
 									color='secondary'
-									size='small'>
+									size='small'
+									onClick={() => diminishQuantity(food._id)}>
 									<Remove fontSize='small' />
 								</IconButton>
 								<Typography variant='h6'>{food.dailyConsumed}</Typography>

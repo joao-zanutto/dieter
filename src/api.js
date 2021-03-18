@@ -20,9 +20,28 @@ export const getFoodList = (setFoodList) => {
 		.catch((err) => console.log(err));
 };
 
+export const getStats = async (setStats) => {
+	api
+		.get('/stats/daily')
+		.then((response) => {
+			console.log(JSON.stringify(response.data, null, 2));
+			setStats(response.data);
+		})
+		.catch((err) => console.log(err));
+};
+
 export const addQuantity = (id) => {
 	api
 		.get(`/consume/${id}`)
+		.then((response) => {
+			alert(response.data.message);
+		})
+		.catch((err) => console.log(err));
+};
+
+export const diminishQuantity = (id) => {
+	api
+		.get(`/diminish/${id}`)
 		.then((response) => {
 			alert(response.data.message);
 		})

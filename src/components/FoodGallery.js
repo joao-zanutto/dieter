@@ -10,13 +10,17 @@ const styles = {
 	},
 };
 
-const FoodGallery = ({ foodList, addQuantity }) => {
+const FoodGallery = ({ foodList, addQuantity, diminishQuantity }) => {
 	return (
 		<Grid container style={styles.container} spacing={2}>
 			{foodList.map((food) => {
 				return (
 					<Grid item>
-						<MiniFoodCard food={food} addQuantity={addQuantity} remove></MiniFoodCard>
+						<MiniFoodCard
+							food={food}
+							addQuantity={addQuantity}
+							diminishQuantity={diminishQuantity}
+							remove></MiniFoodCard>
 					</Grid>
 				);
 			})}

@@ -17,35 +17,35 @@ const styles = {
 	},
 };
 
-const Header = ({ stats }) => {
+const Header = ({ stats, limits }) => {
 	return (
 		<div style={styles.background}>
 			<Grid container spacing={3} style={styles.container}>
 				<Grid item xs={3}>
 					<ProgressBar
-						progress={stats.calIntake}
-						limit={stats.calLimit}
+						progress={stats.cal}
+						limit={limits.calLimit}
 						target='Cal'
 					/>
 				</Grid>
 				<Grid item xs={3}>
 					<ProgressBar
-						progress={stats.carbIntake}
-						limit={stats.carbLimit}
+						progress={stats.carb}
+						limit={limits.carbLimit}
 						target='Carb'
 					/>
 				</Grid>
 				<Grid item xs={3}>
 					<ProgressBar
-						progress={stats.protIntake}
-						limit={stats.protLimit}
+						progress={stats.prot}
+						limit={limits.protLimit}
 						target='Prot'
 					/>
 				</Grid>
 				<Grid item xs={3}>
 					<ProgressBar
-						progress={stats.fatIntake}
-						limit={stats.fatLimit}
+						progress={stats.fat}
+						limit={limits.fatLimit}
 						target='Fat'
 					/>
 				</Grid>
