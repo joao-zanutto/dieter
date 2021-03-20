@@ -1,12 +1,12 @@
 import { Dialog, DialogContent } from '@material-ui/core';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CreateFoodForm from './components/CreateFoodForm';
 import {
 	postFood,
 	getFoodList,
-	addQuantity,
+	postAddQuantity,
 	getStats,
-	diminishQuantity,
+	postDiminishQuantity,
 } from './api';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -24,7 +24,15 @@ function App() {
 	const [foodList, setFoodList] = useState([]);
 	const [stats, setStats] = useState([]);
 
-	useState(() => {
+	const addQuantity = (id) => {
+		postAddQuantity(id, setFoodList, setStats);
+	};
+
+	const diminishQuantity = (id) => {
+		postDiminishQuantity(id, setFoodList, setStats);
+	};
+
+	useEffect(() => {
 		getFoodList(setFoodList);
 		getStats(setStats);
 	}, []);

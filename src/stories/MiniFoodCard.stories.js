@@ -23,7 +23,6 @@ const sampleFood = {
 
 PreviewFoodCard.args = {
 	food: sampleFood,
-	count: 'preview',
 };
 
 GalleryCountZero.args = {

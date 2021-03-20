@@ -5,9 +5,7 @@ const api = create({ baseURL: 'http://localhost:3010' });
 export const postFood = (food) => {
 	api
 		.post('/foods/', food)
-		.then((response) => {
-			alert(JSON.stringify(response.data, null, 2));
-		})
+		.then((response) => {})
 		.catch((err) => console.log(err));
 };
 
@@ -30,20 +28,22 @@ export const getStats = async (setStats) => {
 		.catch((err) => console.log(err));
 };
 
-export const addQuantity = (id) => {
+export const postAddQuantity = (id, setFoodList, setStats) => {
 	api
 		.get(`/consume/${id}`)
 		.then((response) => {
-			alert(response.data.message);
+			setFoodList(response.data.foodList);
+			setStats(response.data.stats);
 		})
 		.catch((err) => console.log(err));
 };
 
-export const diminishQuantity = (id) => {
+export const postDiminishQuantity = (id, setFoodList, setStats) => {
 	api
 		.get(`/diminish/${id}`)
 		.then((response) => {
-			alert(response.data.message);
+			setFoodList(response.data.foodList);
+			setStats(response.data.stats);
 		})
 		.catch((err) => console.log(err));
 };

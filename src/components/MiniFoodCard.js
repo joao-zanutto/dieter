@@ -35,7 +35,7 @@ const MiniFoodCard = ({ food, addQuantity, diminishQuantity }) => {
 						</Typography>
 
 						<Typography variant='h7'>{food.portion}</Typography>
-						{food.dailyConsumed !== 'preview' ? (
+						{!isNaN(food.dailyConsumed) ? (
 							<div style={{ display: 'flex' }}>
 								<IconButton
 									disabled={food.dailyConsumed === 0}
