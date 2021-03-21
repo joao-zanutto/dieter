@@ -32,6 +32,10 @@ function App() {
 		postDiminishQuantity(id, setFoodList, setStats);
 	};
 
+	const postFoodAndUpdateList = (food) => {
+		postFood(food, setFoodList);
+	};
+
 	useEffect(() => {
 		getFoodList(setFoodList);
 		getStats(setStats);
@@ -56,7 +60,7 @@ function App() {
 			<Footer stats={stats} limits={limits} />
 			<Dialog open={open} onClose={handleClose}>
 				<DialogContent>
-					<CreateFoodForm postFood={postFood} />
+					<CreateFoodForm postFood={postFoodAndUpdateList} />
 				</DialogContent>
 			</Dialog>
 		</div>

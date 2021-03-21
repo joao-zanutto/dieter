@@ -37,12 +37,8 @@ function CreateFoodForm({ postFood }) {
 				cal: 4 * carb + 4 * prot + 9 * fat,	
 			};
 
-			const status = postFood(food);
-			console.log(status);
-			if (status.message === 'success') {
-				resetFields();
-				alert('Comida criada com successo!');
-			}
+			postFood(food);
+			resetFields();
 		},
 	});
 

@@ -2,10 +2,12 @@ import { create } from 'apisauce';
 
 const api = create({ baseURL: 'http://localhost:3010' });
 
-export const postFood = (food) => {
+export const postFood = (food, setFoodList) => {
 	api
 		.post('/foods/', food)
-		.then((response) => {})
+		.then((response) => {
+			setFoodList(response.data);
+		})
 		.catch((err) => console.log(err));
 };
 
